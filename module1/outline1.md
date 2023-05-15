@@ -14,7 +14,8 @@ let coord = [-122.4194, 37.7749]; // San Francisco
 * **Transformations**: Geographic transformations are used to convert coordinates between different geographic coordinate systems. For example, you might need to convert GPS coordinates (which are on a spherical coordinate system) to a flat map projection for display.
 #### 1.2 Introduction to GeoJSON and TopoJSON
 
-* **GeoJSON**: GeoJSON is a format for encoding geographic data structures into JSON. It encodes geographic features in JSON format, where each feature has a geometry representing points, lines, polygons, etc., and properties, which is a JSON object containing additional information.```javascript
+* **GeoJSON**: GeoJSON is a format for encoding geographic data structures into JSON. It encodes geographic features in JSON format, where each feature has a geometry representing points, lines, polygons, etc., and properties, which is a JSON object containing additional information.
+```javascript
 // Example of a GeoJSON feature
 let geojsonFeature = {
   "type": "Feature",
