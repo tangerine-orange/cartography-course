@@ -2,7 +2,9 @@
 #### 1.1 Understanding Geospatial Data: Coordinates, Projections, and Transformations
 Geospatial data refers to information about a physical object that can be represented by numerical values in a geographic coordinate system. In the context of maps, this often refers to latitudes, longitudes, and sometimes elevations.
 
-* **Coordinates**: Every location on earth can be described by its latitude and longitude coordinates. Latitude lines run east-west and tell you how far north or south you are from the Equator. Longitude lines run north-south from pole to pole and tell you how far east or west you are from the Prime Meridian.```javascript
+* **Coordinates**: Every location on earth can be described by its latitude and longitude coordinates. Latitude lines run east-west and tell you how far north or south you are from the Equator. Longitude lines run north-south from pole to pole and tell you how far east or west you are from the Prime Meridian.
+
+```javascript
 // Example of a coordinate in [longitude, latitude] format
 let coord = [-122.4194, 37.7749]; // San Francisco
 
@@ -31,11 +33,11 @@ let geojsonFeature = {
 * **TopoJSON**: TopoJSON is an extension of GeoJSON that encodes topology. Rather than representing geometries discretely, geometries in TopoJSON files are stitched together from shared line segments called arcs. This technique is efficient in terms of file size and is also required for some advanced cartographic operations.#### 1.3 Sourcing Geospatial Data: Public Datasets
 There are numerous sources of public geospatial data:
 
-* [USGS](https://www.usgs.gov/" target="_new): The U.S. Geological Survey provides geospatial data for the United States. This includes topographic data, land use, landmarks, and much more.
+* [USGS](https://www.usgs.gov/): The U.S. Geological Survey provides geospatial data for the United States. This includes topographic data, land use, landmarks, and much more.
 
-* [Natural Earth Data](https://www.naturalearthdata.com/" target="_new): Natural Earth is a public domain map dataset available at multiple scales and includes both cultural and physical features.
+* [Natural Earth Data](https://www.naturalearthdata.com/): Natural Earth is a public domain map dataset available at multiple scales and includes both cultural and physical features.
 
-* [OpenStreetMap](https://www.openstreetmap.org/" target="_new): OpenStreetMap (OSM) is a collaborative project to create a free editable map of the world. The data from OSM can be downloaded and used under its open license.
+* [OpenStreetMap](https://www.openstreetmap.org/): OpenStreetMap (OSM) is a collaborative project to create a free editable map of the world. The data from OSM can be downloaded and used under its open license.
 
 #### Exercises
 1. **Coordinates**: Write a JavaScript function that takes a place name as input and returns a coordinate array [longitude, latitude]. You can use any geocoding API for this.
