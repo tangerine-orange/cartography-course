@@ -7,7 +7,6 @@ Geospatial data refers to information about a physical object that can be repres
 ```javascript
 // Example of a coordinate in [longitude, latitude] format
 let coord = [-122.4194, 37.7749]; // San Francisco
-
 ```
 
 * **Projections**: The Earth is a sphere, and maps are flat. To make a map, we must project the surface of the Earth onto a plane. There are many different ways to do this, and each method (or projection) has different strengths and weaknesses. Some preserve area, some preserve shape, and some preserve direction. Understanding these trade-offs is essential when making maps.
