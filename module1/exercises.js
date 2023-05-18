@@ -42,11 +42,16 @@ function createGeoJSONFeature(coordinates, placeName) {
  * from it such as the number of features, the type of features (points, lines, polygons), etc.
  */
 
-// This function assumes that path is a path to a zipped shapefile stored locally
-async function inspectDataset(path) {
+async function shapefileToGeoJson(path) {
     const buffer = await fs.readFile(path);
     // Load the dataset
     const geoJson = await shp(buffer);
+    return geoJson;
+}
+
+// This function assumes that path is a path to a zipped shapefile stored locally
+async function inspectDataset(path) {
+    const geoJson = await shapefileToGeoJson(path);
     // Inspect the dataset
     console.log(geoJson.features.length);
     // Get the types of features -- mostly polygons and multipolygons
@@ -65,3 +70,9 @@ const main = async () => {
 };
 
 main();
+
+module.exports = {
+    shapefileToGeoJson,
+    createGeoJSONFeature,
+    getCoordinates
+}
