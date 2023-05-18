@@ -67,7 +67,7 @@ function cleanGeoJSON(geojson) {
 }
 
 ```
-1. **Data Transformation**: Using Turf.js, write a JavaScript function that takes two GeoJSON points and returns the midpoint between them.
+2. **Data Transformation**: Using Turf.js, write a JavaScript function that takes two GeoJSON points and returns the midpoint between them.
 ```javascript
 // Example function structure
 function getMidpoint(point1, point2) {
@@ -75,7 +75,7 @@ function getMidpoint(point1, point2) {
 }
 
 ```
-1. **Geospatial Libraries**: Explore the Turf.js documentation and find a function that you find interesting. Write a JavaScript function that uses this Turf.js function to perform a geospatial operation.
+3. **Geospatial Libraries**: Explore the Turf.js documentation and find a function that you find interesting. Write a JavaScript function that uses this Turf.js function to perform a geospatial operation.
 ```javascript
 // Example function structure
 function performOperation(feature1, feature2) code here

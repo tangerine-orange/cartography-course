@@ -30,7 +30,8 @@ let geojsonFeature = {
 
 ```
 
-* **TopoJSON**: TopoJSON is an extension of GeoJSON that encodes topology. Rather than representing geometries discretely, geometries in TopoJSON files are stitched together from shared line segments called arcs. This technique is efficient in terms of file size and is also required for some advanced cartographic operations.#### 1.3 Sourcing Geospatial Data: Public Datasets
+* **TopoJSON**: TopoJSON is an extension of GeoJSON that encodes topology. Rather than representing geometries discretely, geometries in TopoJSON files are stitched together from shared line segments called arcs. This technique is efficient in terms of file size and is also required for some advanced cartographic operations.
+#### 1.3 Sourcing Geospatial Data: Public Datasets
 There are numerous sources of public geospatial data:
 
 * [USGS](https://www.usgs.gov/): The U.S. Geological Survey provides geospatial data for the United States. This includes topographic data, land use, landmarks, and much more.
@@ -49,7 +50,7 @@ async function getCoordinates(placeName) {
 }
 
 ```
-1. **GeoJSON**: Write a JavaScript function that takes a coordinate array and a place name as input and returns a GeoJSON Feature object representing a point at that location.
+2. **GeoJSON**: Write a JavaScript function that takes a coordinate array and a place name as input and returns a GeoJSON Feature object representing a point at that location.
 ```javascript
 // Example function structure
 function createGeoJSONFeature(coordinates, placeName) {
@@ -66,7 +67,7 @@ function createGeoJSONFeature(coordinates, placeName) {
 }
 
 ```
-1. **Sourcing Data**: Choose a dataset from one of the public data sources (USGS, Natural Earth Data, OpenStreetMap), download it and inspect its structure. Try to extract meaningful information from it such as the number of features, the type of features (points, lines, polygons), etc.
+3. **Sourcing Data**: Choose a dataset from one of the public data sources (USGS, Natural Earth Data, OpenStreetMap), download it and inspect its structure. Try to extract meaningful information from it such as the number of features, the type of features (points, lines, polygons), etc.
 ```javascript
 // Example function structure
 function inspectDataset(dataset) {
