@@ -53,3 +53,37 @@ Both Leaflet and Mapbox GL JS are powerful libraries that can be used for creati
 
 * **Mapbox GL JS**: More powerful and flexible, but also more complex. It uses WebGL for high-performance rendering, allowing for smooth zooming, map rotation, and more. It's a good choice if you need advanced features like vector tiles, 3D buildings, or client-side data visualization.
 ### Exercises
+1. **Create a Map with Leaflet**: Using the Leaflet.js library, create a simple map that centers on a location of your choice. Use the provided documentation to understand how to initialize the map and set the view to your chosen location. Be sure to add tile layers to display the map.
+```javascript
+// Example structure
+var map = L.map('map').setView([51.505, -0.09], 13);
+
+```
+1. **Create a Map with Mapbox**: Repeat the same exercise as above, but this time use Mapbox GL JS. Similar to the Leaflet exercise, you will need to initialize a new map object and set the view to your chosen location. You will also need to provide your Mapbox Access Token.
+```javascript
+// Example structure
+mapboxgl.accessToken = 'your access token here';
+var map = new mapboxgl.Map({
+    container: 'map',
+    style: 'mapbox://styles/mapbox/streets-v11',
+    center: [-74.5, 40], // starting position
+    zoom: 9 // starting zoom
+});
+
+```
+1. **Adding Markers**: Extend the maps you created in exercises 1 and 2 by adding a marker at a location of your choice. You could use the location of a landmark, your home, or any other location that interests you.
+For Leaflet:
+```javascript
+// Example structure
+L.marker([51.5, -0.09]).addTo(map);
+
+```
+For Mapbox:
+```javascript
+// Example structure
+new mapboxgl.Marker()
+    .setLngLat([longitude, latitude])
+    .addTo(map);
+
+```
+1. **Comparing Libraries**: Compare your experiences using Leaflet.js and Mapbox GL JS. What were the main differences? Which one would you prefer for what types of projects? This is more of a reflective exercise, so there's no code example for this. Consider things like the ease of use, functionality, customization options, and performance.
