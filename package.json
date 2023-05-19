@@ -1,5 +1,8 @@
 {
   "dependencies": {
+    "@turf/center": "^6.5.0",
+    "@turf/midpoint": "^6.5.0",
+    "@turf/turf": "^6.5.0",
     "shpjs": "^4.0.4"
   }
 }

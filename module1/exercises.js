@@ -69,8 +69,6 @@ const main = async () => {
     await inspectDataset('data/ne_50m_admin_0_countries.zip');
 };
 
-main();
-
 module.exports = {
     shapefileToGeoJson,
     createGeoJSONFeature,
