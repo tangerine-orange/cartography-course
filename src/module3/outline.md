@@ -86,4 +86,8 @@ new mapboxgl.Marker()
     .addTo(map);
 
 ```
+Note that if you have installed mapbox-gl using npm, you will need to import the mapbox stylesheet:
+```
+import 'mapbox-gl/dist/mapbox-gl.css'; 
+```
 1. **Comparing Libraries**: Compare your experiences using Leaflet.js and Mapbox GL JS. What were the main differences? Which one would you prefer for what types of projects? This is more of a reflective exercise, so there's no code example for this. Consider things like the ease of use, functionality, customization options, and performance.
