@@ -1,2 +1,4 @@
-data/*
-node_modules/*
+src/data/*
+src/node_modules/*
+dist/*
+node_modules
