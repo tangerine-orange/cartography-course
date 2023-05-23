@@ -37,9 +37,6 @@ const main = () => {
         }).setLngLat(c)
             .setPopup(new mapboxgl.Popup().setHTML(points[i].properties.NAME)) // add popup
             .addTo(map);
-        const markerEl = marker.getElement();
-        console.log(marker);
-        console.log(markerEl);
     })
   }
 
