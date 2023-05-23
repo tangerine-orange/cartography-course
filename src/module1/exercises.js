@@ -2,6 +2,7 @@
 // const fs = require('fs').promises;
 import shp from 'shpjs';
 import fs from 'fs/promises';
+import { MAPBOX_KEY } from '../../environment';
 
 /**
  * Coordinates: Write a JavaScript function that takes a place name as input
@@ -9,7 +10,7 @@ import fs from 'fs/promises';
  * geocoding API for this.
  */
 async function getCoordinates(placeName) {
-    const apiKey = "pk.eyJ1IjoiampqcmVpc3NzIiwiYSI6ImNsaHM5aWlxODJ2eGEzbW1tcGkzYzJqZmoifQ.W62jLacpbTU-s4ScEV8qJQ";
+    const apiKey = MAPBOX_KEY
     const url = (placeName) => "https://api.mapbox.com/geocoding/v5/mapbox.places/" + placeName + ".json?access_token=" + apiKey;
     // Your geocoding API call goes here
     // Return the coordinates as [longitude, latitude]
