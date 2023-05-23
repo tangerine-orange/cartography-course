@@ -1,8 +1,5 @@
 import { getCoordinates, randomPoints } from '../module2/exercises';
-// const shapefileToGeoJson = require('../module1/exercises').shapefileToGeoJson;
-// const { getCoordinates, randomPoints } = require('../module2/exercises');
-import * as L from 'leaflet';
-import 'leaflet/dist/leaflet.css';
+import mapboxgl from "mapbox-gl";
 import './style.css';
 import geojson from '../data.json';
 
@@ -14,20 +11,21 @@ const body = document.getElementsByTagName('body')[0];
 body.prepend(mapRoot);
 body.prepend(name);
 
-const main = async () => {
+const main = () => {
     const points = randomPoints(1, geojson);
-    const coordinates = points.map(getCoordinates)
+    const coordinates = points.map(getCoordinates).map((c) => [c[1], c[0]]);
     // Initialize map
     name.innerHTML = points[0].properties.NAME;
     console.log(points[0].properties.NAME);
     console.log(coordinates[0]);
-    
-    var map = L.map('map').setView(coordinates[0], 7);
-    
-    // Set map tiles
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 19,
-    }).addTo(map);
-}
 
-main();
+    mapboxgl.accessToken = "pk.eyJ1IjoiampqcmVpc3NzIiwiYSI6ImNsaHM5aWlxODJ2eGEzbW1tcGkzYzJqZmoifQ.W62jLacpbTU-s4ScEV8qJQ";
+    var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: coordinates[0], // starting position
+        zoom: 7 // starting zoom
+    });
+  }
+
+  main();

@@ -7,6 +7,7 @@
     "fs": "^0.0.1-security",
     "leaflet": "^1.9.4",
     "lodash": "^4.17.21",
+    "mapbox-gl": "^2.14.1",
     "shpjs": "^4.0.4"
   },
   "private": true,

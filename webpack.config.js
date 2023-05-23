@@ -4,6 +4,7 @@ const NodePolyfillPlugin = require("node-polyfill-webpack-plugin")
 
 const moduleEntries = {
     "module3/exercise1": './src/module3/exercise1.js',
+    "module3/exercise2": './src/module3/exercise2.js',
 }
 
 const entries = {
