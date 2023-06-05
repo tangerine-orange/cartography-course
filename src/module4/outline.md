@@ -30,6 +30,8 @@ Leaflet.js is a powerful, open-source library used to create interactive maps on
 </html>
 ```
 
+(**TODO:** Add code blocks for bundled JS formatting)
+
 In this script, we first create a `div` element with an id of `mapid`. Then, we initialize our map using `L.map('mapid')` and set the initial geographic center of the map view using `setView([latitude, longitude], zoomLevel)`. 
 
 The `L.tileLayer(...)` method is used to load and display tile layers on the map. Here we are using the OpenStreetMap tile server, and we add the tile layer to the map with `.addTo(map)`.
@@ -105,7 +107,7 @@ L.geoJSON(geojsonFeature, {
 }).addTo(map);
 ```
 
-In this example, we define a `style` function that sets the style of each feature based on its properties.
+In this example, we define a `style` function that sets the style of each feature based on its properties. Note that this particular style will not change our place marker, but it will have an effect on any polygon features on your map (**TODO:** Add polygons to map)
 
 #### Adding Layers and Layer Controls
 
