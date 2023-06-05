@@ -114,6 +114,27 @@ In this example, we define a `style` function that sets the style of each featur
 Leaflet.js allows you to work with different layers simultaneously and provides a built-in control for switching between these layers. Here's an example:
 
 ```javascript
+// Define base layers
+var osmLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+});
+
+var satelliteLayer = L.tileLayer(`https://api.mapbox.com/styles/v1/mapbox/satellite-v9/tiles/{z}/{x}/{y}?access_token=${YOUR_ACCESS_TOKEN}`, {
+    maxZoom: 19,
+    tileSize: 512,
+    zoomOffset: -1,
+    attribution: '&copy; <a href="https://www.mapbox.com/">Mapbox</a>'
+});
+
+// Define overlays
+// Please replace 'cities.geojson' and 'roads.geojson' with paths to your actual GeoJSON files
+// If you don't have GeoJSON available, you can leave the overlays out and only add the baseLayers.
+// Also note that calling L.geoJSON.ajax may require the leaflet-ajax plugin, but that you could
+// also fetch the geoJSON some other way and then add it to your map with L.geoJSON
+var cityLayer = L.geoJSON.ajax('cities.geojson'); 
+var roadLayer = L.geoJSON.ajax('roads.geojson');
+
 var baseLayers = {
     "OpenStreetMap": osmLayer,
     "Satellite": satelliteLayer
@@ -124,6 +145,12 @@ var overlays = {
     "Roads": roadLayer
 };
 
+// Create a map instance
+var map = L.map('map', {
+    layers: [osmLayer, cityLayer, roadLayer]  // Add default layers to the map
+}).setView([51.505, -0.09], 13);
+
+// Add controls
 L.control.layers(baseLayers, overlays).addTo(map);
 ```
 
