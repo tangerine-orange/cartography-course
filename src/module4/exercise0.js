@@ -51,9 +51,16 @@ const baseLayers = {
   "Satellite": satelliteLayer
 };
 
+// const overlays = {
+//   "Cities": cityLayer,
+//   "Roads": roadLayer
+// };
+
 const main = async () => {
   const map = L.map('map').setView([31.505, 0], 3);
 
+  // const points = randomPoints(20, geojson);
+  
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
   }).addTo(map);
