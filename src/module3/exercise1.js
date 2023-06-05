@@ -7,6 +7,7 @@ import './style.css';
 import geojson from '../data.json';
 import iconUrl from  "leaflet/dist/images/marker-icon-2x.png";
 import shadowUrl from "leaflet/dist/images/marker-shadow.png";
+import { blueIcon } from './icons';
 
 const mapRoot = document.createElement('div');
 mapRoot.id = "map";
@@ -32,18 +33,8 @@ const main = async () => {
       maxZoom: 19,
     }).addTo(map);
 
-    const icon = L.icon({
-        iconUrl,
-        shadowUrl,
-        iconSize: [25, 41],
-        iconAnchor: [12, 41],
-        popupAnchor: [1, -34],
-        tooltipAnchor: [16, -28],
-        shadowSize: [41, 41]
-    });
-
     coordinates.forEach(c => {  
-      L.marker(c, { icon }).addTo(map);
+      L.marker(c, { icon: blueIcon }).addTo(map);
     })
 }
 
