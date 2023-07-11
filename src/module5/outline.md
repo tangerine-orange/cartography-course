@@ -90,7 +90,7 @@ var map = new mapboxgl.Map({
 Mapbox GL JS also supports 3D buildings and terrain. You can add a 3D buildings layer to your map with the following code:
 
 ```javascript
-map.on('`load`, function () {
+map.on(`load`, function () {
     // Insert the layer beneath any symbol layer.
     var layers = map.getStyle().layers;
      
